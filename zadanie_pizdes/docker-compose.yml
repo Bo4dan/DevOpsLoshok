@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  version1:
+    build: version1
+    container_name: flask_v1
+    # (необязательно) expose: - "5000"
+  version2:
+    build: version2
+    container_name: flask_v2
+  version3:
+    build: version3
+    container_name: flask_v3
+
+  nginx:
+    build: nginx
+    container_name: nginx_lb
+    ports:
+      - "80:80"
+    depends_on:
+      - version1
+      - version2
+      - version3
