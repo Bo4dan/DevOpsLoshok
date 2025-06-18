@@ -1,0 +1,1 @@
+Написать multi-stage Dockerfile для приложения на GOlang , собери его, сбилди. Сравни вес образа multi-stage с весом образа без multi-stage.
